@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="./fonts/Roboto-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/OpenSans-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/OpenSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Бронирование номеров</title>
+  </head>
+  <body class="page__body">
+    <main class="main-container">
+      <section class="variants">
+        <h1 class="variants__title">Номера и цены</h1>
+        <div class="variants__wrapper">
+          <ul class="variants__list">
+            <li class="variants__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="images/card1-desktop@2x@1x.webp 1x, images/card1-desktop@2x@2x.webp 2x" width="372" height="372">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/card1-tablet@2x@1x.webp 1x, images/card1-tablet@2x@2x.webp 2x" width="336" height="420">
+                <source type="image/webp" srcset="images/card1-mobile@2x@1x.webp 1x, images/card1-mobile@2x@2x.webp 2x" width="288" height="347">
+                <source type="image/jpeg" media="(min-width: 1280px)" srcset="images/card1-desktop@2x@1x.jpg 1x, images/card1-desktop@2x@2x.jpg 2x" width="372" height="372">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/card1-tablet@2x@1x.jpg 1x, images/card1-tablet@2x@2x.jpg 2x" width="336" height="420">
+                <img class="variants__image" src="images/card1-mobile@2x@1x.jpg" srcset="images/card1-mobile@2x@2x.jpg 2x" width="288" height="347" alt="Фото номера Представительского люкса.">
+              </picture>
+              <div class="variants__content">
+                <a class="variants__subtitle" href="#">Представительский люкс</a>
+                <p class="variants__description">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
+                <p class="variants__text">Цена за сутки</p>
+                <div class="variants__container">
+                  <span class="variantcy__desc">от</span>
+                  <span class="variants__price">7 900</span>
+                  <span class="variants__currency">₽</span>
+                </div>
+                <button class="variants__button" type="button">Забронировать</button>
+              </div>
+            </li>
+            <li class="variants__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="images/card2-desktop@2x@1x.webp 1x, images/card2-desktop@2x@2x.webp 2x" width="372" height="372">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/card2-tablet@2x@1x.webp 1x, images/card2-tablet@2x@2x.webp 2x" width="336" height="420">
+                <source type="image/webp" srcset="images/card2-mobile@2x@1x.webp 1x, images/card2-mobile@2x@2x.webp 2x" width="288" height="347">
+                <source type="image/jpeg" media="(min-width: 1280px)" srcset="images/card2-desktop@2x@1x.jpg 1x, images/card2-desktop@2x@2x.jpg 2x" width="372" height="372">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/card2-tablet@2x@1x.jpg 1x, images/card2-tablet@2x@2x.jpg 2x" width="336" height="420">
+                <img class="variants__image" src="images/card2-mobile@2x@1x.jpg" srcset="images/card2-mobile@2x@2x.jpg 2x" width="288" height="347" alt="Фото номера Дуплекс.">
+              </picture>
+              <div class="variants__content">
+                <a class="variants__subtitle" href="#">Дуплекс</a>
+                <p class="variants__description">Просторный двухкомнатный номер с шикарным видом на парк</p>
+                <p class="variants__text">Цена за сутки</p>
+                <div class="variants__container">
+                  <span class="variantcy__desc">от</span>
+                  <span class="variants__price">5 700</span>
+                  <span class="variants__currency">₽</span>
+                </div>
+                <button class="variants__button" type="button">Забронировать</button>
+              </div>
+            </li>
+            <li class="variants__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="images/card3-desktop@2x@1x.webp 1x, images/card3-desktop@2x@2x.webp 2x" width="372" height="372">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/card3-tablet@2x@1x.webp 1x, images/card3-tablet@2x@2x.webp 2x" width="336" height="420">
+                <source type="image/webp" srcset="images/card3-mobile@2x@1x.webp 1x, images/card3-mobile@2x@2x.webp 2x" width="288" height="347">
+                <source type="image/jpeg" media="(min-width: 1280px)" srcset="images/card3-desktop@2x@1x.jpg 1x, images/card3-desktop@2x@2x.jpg 2x" width="372" height="372">
+                <source type="image/jpeg" media="(min-width: 768px)" srcset="images/card3-tablet@2x@1x.jpg 1x, images/card3-tablet@2x@2x.jpg 2x" width="336" height="420">
+                <img class="variants__image" src="images/card3-mobile@2x@1x.jpg" srcset="images/card3-mobile@2x@2x.jpg 2x" width="288" height="347" alt="Фото номера Бизнес-люкс.">
+              </picture>
+              <div class="variants__content">
+                <a class="variants__subtitle" href="#">Бизнес-люкс</a>
+                <p class="variants__description">Трёхкомнатный номер с панорамным видом на Москва-реку</p>
+                <p class="variants__text">Цена за сутки</p>
+                <div class="variants__container">
+                  <span class="variantcy__desc">от</span>
+                  <span class="variants__price">4 900</span>
+                  <span class="variants__currency">₽</span>
+                </div>
+                <button class="variants__button" type="button">Забронировать</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- <script src="scripts/index.js"></script> -->
+  </body>
+</html>

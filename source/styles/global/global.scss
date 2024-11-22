@@ -1,0 +1,31 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  position: relative;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  color: $base-white-color;
+  background: $background-blue;
+  background-image:
+    image-set(url("/images/background@1x.webp") 1x type("image/webp"),
+    url("/images/background@1x.png") 1x,
+    url("/images/background@2x.webp") 2x type("image/webp"),
+    url("/images/background@2x.png") 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
