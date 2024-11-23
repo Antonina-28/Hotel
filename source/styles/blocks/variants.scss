@@ -72,6 +72,32 @@
     z-index: 1;
     background: $background-grey;
   }
+
+  &:hover {
+    box-shadow: 0 4px 15px 0 #000000;
+    border-radius: 14px;
+  }
+
+  &:hover .variants__action {
+    display: block;
+  }
+
+  &:hover .variants__subtitle {
+    text-decoration: underline;
+  }
+
+  &:active {
+    box-shadow: 0 4px 15px 0 #000000;
+    border-radius: 14px;
+  }
+
+  &:active .variants__action {
+    display: block;
+  }
+
+  &:active .variants__subtitle {
+    opacity: 0.5;
+  }
 }
 
 .variants__image {
@@ -101,6 +127,28 @@
   }
 }
 
+.variants__action {
+  position: absolute;
+  padding: 4px 4px 5px 16px;
+  background-color: $accent-color;
+  width: 177px;
+  display: none;
+  z-index: 1;
+  top: 21px;
+  left: 21px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 30px;
+    top: 0;
+    background-image: url("../../images/icons/icon-discount.svg");
+    background-repeat: no-repeat;
+    background-size: 36px 30px;
+  }
+}
+
 .variants__subtitle {
   font-size: 20px;
   line-height: 26px;
@@ -114,6 +162,10 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/3;
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -214,6 +266,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding: 11px 13px 13px;
@@ -225,5 +278,15 @@
     grid-row: 3/5;
     height: 48px;
     align-self: flex-end;
+  }
+
+  &:hover {
+    background-color: $primary3-color;
+    box-shadow: 0 4px 4px 0 #000000;
+  }
+
+  &:active {
+    background-color: $primary3-color;
+    color: #f9637c;
   }
 }

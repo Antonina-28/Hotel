@@ -8,8 +8,4 @@
   flex-direction: column;
   min-width: 320px;
   min-height: 100%;
-
-  @media (min-width: $tablet-width) {
-    position: relative;
-  }
 }
