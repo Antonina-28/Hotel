@@ -1,20 +1,21 @@
 body {
   position: relative;
+  height: 100vh;
+  margin: 0;
   font-family: $primary-font;
-  font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: $base-white-color;
   background: $background-blue;
-  background-image:
-    image-set(url("/images/background@1x.webp") 1x type("image/webp"),
-    url("/images/background@1x.png") 1x,
-    url("/images/background@2x.webp") 2x type("image/webp"),
-    url("/images/background@2x.png") 2x);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100vw 100vh;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 img {
