@@ -243,8 +243,11 @@
   }
 
   &:active::after {
-    opacity: 0.5;
     display: none;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
