@@ -1,4 +1,4 @@
-import { readFileSync, rmSync } from 'node:fs';
+import { rmSync } from 'node:fs';
 
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
@@ -25,13 +25,8 @@ const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
 const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
-  `${PATH_TO_SOURCE}*.ico`,
-  `${PATH_TO_SOURCE}*.webmanifest`,
-  `${PATH_TO_SOURCE}favicons/*.{png,svg}`,
-  `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}images/icons/**/*`,
-  `!${PATH_TO_SOURCE}**/README.md`,
 ];
 let isDevelopment = true;
 
@@ -68,7 +63,6 @@ export function processScripts () {
     .pipe(gulpEsbuild({
       bundle: true,
       format: 'esm',
-      // splitting: true,
       platform: 'browser',
       minify: !isDevelopment,
       sourcemap: isDevelopment,
@@ -80,7 +74,7 @@ export function processScripts () {
 
 export function optimizeRaster () {
   const RAW_DENSITY = 2;
-  const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
+  const TARGET_FORMATS = [undefined, 'webp'];
 
   function createOptionsFormat() {
     const formats = [];
@@ -134,22 +128,6 @@ export function startServer () {
         dir: `${PATH_TO_SOURCE}fonts`,
       },
       {
-        route: '/*.ico',
-        dir: `${PATH_TO_SOURCE}*.ico`,
-      },
-      {
-        route: '/*.webmanifest',
-        dir: `${PATH_TO_SOURCE}*.webmanifest`,
-      },
-      {
-        route: '/favicons',
-        dir: `${PATH_TO_SOURCE}favicons`,
-      },
-      {
-        route: '/vendor',
-        dir: `${PATH_TO_SOURCE}vendor`,
-      },
-      {
         route: '/images',
         dir: `${PATH_TO_SOURCE}images`,
       },
@@ -157,11 +135,6 @@ export function startServer () {
     cors: true,
     notify: false,
     ui: false,
-  }, (err, bs) => {
-    bs.addMiddleware('*', (req, res) => {
-      res.write(readFileSync(`${PATH_TO_DIST}404.html`));
-      res.end();
-    });
   });
 
   watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));

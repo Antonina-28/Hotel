@@ -16,7 +16,7 @@
     <main class="main-container">
       <section class="variants">
         <h1 class="variants__title">Номера и цены</h1>
-        <div class="variants__container">
+        <div class="variants__wrapper">
           <ul class="variants__list">
             <li class="variants__item">
               <picture>
@@ -28,13 +28,18 @@
                 <p class="variants__description">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
                 <div class="variants__container">
                   <p class="variants__text">Цена за сутки</p>
-                  <div class="variants__costs">
+                  <div class="variants__cost">
                     <span class="variants__symbol">от</span>
                     <span class="variants__price">7 900</span>
                     <span class="variants__currency">₽</span>
                   </div>
                   <button class="variants__button" type="button">Забронировать</button>
                 </div>
+              </div>
+              <div class="reserved__container">
+                <p class="reserved__text">Номер зарезервирован
+                  <span>Перейти к <a class="reserved__link" href="#">оплате</a></span>
+                </p>
               </div>
             </li>
             <li class="variants__item">
@@ -48,13 +53,18 @@
                 <p class="variants__description">Просторный двухкомнатный номер с шикарным видом на парк</p>
                 <div class="variants__container">
                   <p class="variants__text">Цена за сутки</p>
-                  <div class="variants__costs">
+                  <div class="variants__cost">
                     <span class="variants__symbol">от</span>
                     <span class="variants__price">5 700</span>
                     <span class="variants__currency">₽</span>
                   </div>
                   <button class="variants__button" type="button">Забронировать</button>
                 </div>
+              </div>
+              <div class="reserved__container">
+                <p class="reserved__text">Номер зарезервирован
+                  <span>Перейти к <a class="reserved__link" href="#">оплате</a></span>
+                </p>
               </div>
             </li>
             <li class="variants__item">
@@ -67,7 +77,7 @@
                 <p class="variants__description">Трёхкомнатный номер с панорамным видом на Москва&#8209;реку</p>
                 <div class="variants__container">
                   <p class="variants__text">Цена за сутки</p>
-                  <div class="variants__costs">
+                  <div class="variants__cost">
                     <span class="variants__symbol">от</span>
                     <span class="variants__price">4 900</span>
                     <span class="variants__currency">₽</span>
@@ -75,18 +85,16 @@
                   <button class="variants__button" type="button">Забронировать</button>
                 </div>
               </div>
+              <div class="reserved__container">
+                <p class="reserved__text">Номер зарезервирован
+                  <span>Перейти к <a class="reserved__link" href="#">оплате</a></span>
+                </p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <template class="reserved">
-      <div class="reserved__container">
-        <p class="reserved__text">Номер зарезервирован
-          <span>Перейти к <a class="reserved__link" href="#">оплате</a></span>
-        </p>
-      </div>
-    </template>
     <script src="scripts/index.js"></script>
   </body>
 </html>
