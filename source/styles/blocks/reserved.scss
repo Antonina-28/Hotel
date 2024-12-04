@@ -1,9 +1,10 @@
 .reserved {
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: 2;
   display: none;
-  width: inherit;
+  width: 100%;
   min-height: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
@@ -17,7 +18,7 @@
   align-items: center;
   justify-content: center;
   width: inherit;
-  min-height: 97px;
+  min-height: 150px;
   margin: 0;
   padding: 10px 24px;
   font-family: $secondary-font;
@@ -25,6 +26,14 @@
   text-align: center;
   background-color: $secondary-color;
   border-radius: 0 0 12px 12px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 97px;
+  }
 }
 
 .reserved__link {

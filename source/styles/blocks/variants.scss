@@ -135,23 +135,21 @@
 .variants__content {
   position: relative;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
-  max-width: 246px;
   min-height: 249px;
-  margin: 21px;
-  margin-top: -270px;
+  margin-top: -249px;
 
   @media (min-width: $tablet-width) {
-    max-width: 288px;
     min-height: 303px;
-    margin: 24px;
     margin-top: -327px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 324px;
     min-height: 185px;
-    margin-top: -209px;
+    margin-top: -185px;
+    margin-bottom: 24px;
   }
 }
 
@@ -161,24 +159,24 @@
 
   @media (min-width: $tablet-width) {
     min-height: 247px;
-    margin-top: -273px;
+    margin-top: -249px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 185px;
-    margin-top: -209px;
+    margin-top: -185px;
   }
 }
 
 .variants__item:nth-child(3) .variants__content {
   @media (min-width: $tablet-width) {
     min-height: 247px;
-    margin-top: -273px;
+    margin-top: -249px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 185px;
-    margin-top: -209px;
+    margin-top: -185px;
   }
 }
 
@@ -209,8 +207,7 @@
   position: relative;
   display: inline-block;
   min-height: 26px;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 21px 10px;
   font-size: 20px;
   line-height: 26px;
   color: $base-white-color;
@@ -219,7 +216,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: auto;
-    margin-bottom: 9px;
+    margin: 0 24px 9px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -259,7 +256,7 @@
 .variants__description {
   max-width: 246px;
   min-height: 63px;
-  margin: 0;
+  margin: 0 21px;
   padding-bottom: 21px;
   font-family: $secondary-font;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -268,6 +265,8 @@
   @media (min-width: $tablet-width) {
     max-width: 288px;
     min-height: 72px;
+    margin-left: 24px;
+    margin-right: 24px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -282,6 +281,11 @@
 .variants__container {
   display: flex;
   flex-direction: column;
+  padding: 0 21px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 24px;
+  }
 
   @media (min-width: $desktop-width) {
     display: grid;
@@ -355,6 +359,7 @@
   font-size: 20px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.6);
+  word-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 23px;
@@ -363,6 +368,7 @@
 }
 
 .variants__button {
+  margin-bottom: 21px;
   padding: 8px 10px 10px;
   font-family: $secondary-font;
   font-size: 14px;
@@ -377,6 +383,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 288px;
+    margin-bottom: 24px;
     padding: 11px 13px 13px;
     font-size: 16px;
     border-radius: 5px;
@@ -387,6 +394,7 @@
     grid-column: 2/3;
     grid-row: 3/5;
     min-height: 48px;
+    margin-bottom: 0;
   }
 
   &:hover,
