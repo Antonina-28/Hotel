@@ -96,21 +96,21 @@
     content: "";
   }
 
-  &:not(.reserved):hover {
+  &:not(.reserved__room):hover {
     border-radius: 12px;
     box-shadow: 0 4px 15px 0 $base-black-color;
   }
 
-  &:not(.reserved):hover .variants__action {
+  &:not(.reserved__room):hover .variants__action {
     display: block;
   }
 
-  &:not(.reserved):active {
+  &:not(.reserved__room):active {
     border-radius: 12px;
     box-shadow: 0 4px 15px 0 $base-black-color;
   }
 
-  &:not(.reserved):active .variants__action {
+  &:not(.reserved__room):active .variants__action {
     display: block;
   }
 }
