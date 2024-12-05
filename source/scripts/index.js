@@ -6,6 +6,8 @@ function clickButton() {
     const card = button.closest('.variants__item');
     const reservedMessage = card.querySelector('.reserved');
 
+    const cost = card.querySelector('.variants__container');
+
     button.addEventListener('click', (event) => {
       event.stopPropagation();
 
@@ -13,6 +15,7 @@ function clickButton() {
         selectedCards.delete(card);
         reservedMessage.style.display = 'none';
         card.classList.remove('reserved__room');
+        cost.style.display = 'grid';
       } else {
         selectedCards.add(card);
       }
@@ -22,9 +25,11 @@ function clickButton() {
       if (selectedCards.has(this)) {
         reservedMessage.style.display = 'block';
         card.classList.add('reserved__room');
+        cost.style.display = 'none';
       } else {
         reservedMessage.style.display = 'none';
         card.classList.remove('reserved__room');
+        cost.style.display = 'grid';
       }
     });
 
@@ -34,6 +39,7 @@ function clickButton() {
         selectedCards.delete(this);
         reservedMessage.style.display = 'none';
         card.classList.remove('reserved__room');
+        cost.style.display = 'grid';
       }
     });
   });
